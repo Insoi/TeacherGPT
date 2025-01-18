@@ -1,0 +1,35 @@
+{% extends "base.j2" %}
+
+{% block title %}Chat{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="/static/index.css">
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div id="chat-container" class="chat-container">
+            <div id="empty-notice" class="empty-notice">Intet at se her.</div>
+            <div id="messages-container">
+                <div class="message user">
+                    <p></p>
+                </div>
+                <div class="message assistant">
+                    <img src="/static/Roar Lindekilde Arboe Jakobsen.png" alt="Teacher">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input id="clear-button" class="input-button red-button" type="button" value="Slet Chat">
+            <input id="input-bar" class="input-bar" type="text" placeholder="Skriv dit spørgsmål here">
+            <input id="send-button" class="input-button" type="button" value="Send">
+            <img id="agent1" style="border: 3px solid #26AD26;" src="/static/Roar Lindekilde Arboe Jakobsen.png" alt="Roar Lindekilde Arboe Jakobsen">
+            <img id="agent2" src="/static/Astrid Stilling Eriksen.png" alt="Astrid Stilling Eriksen">
+        </div>
+    </main>
+
+    <script type="text/javascript" src="/static/index.js"></script>
+{% endblock %}
